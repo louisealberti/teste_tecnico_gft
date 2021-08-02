@@ -20,8 +20,8 @@ public class CalculadoraImposto
         
         double impostoIPI = (custoIPI != valor)? custoIPI - valor : valor; 
         double impostoICMS = (custoICMS != valor)? custoICMS - valor : valor;
-        double impostoCOFINS = (custoCOFINS  != valor)? custoCOFINS  - valor : valor;
-        double totalImposto = impostoIPI + impostoICMS + impostoCOFINS;
+        double impostoCOFINS = (custoCOFINS  != valor) ? custoCOFINS  - valor : 0;
+	double totalImposto = impostoIPI + impostoICMS + impostoCOFINS;
         double totalPagar = valor + totalImposto;
         
         System.out.println("IPI: " + impostoIPI);
